@@ -1,1 +1,1 @@
-# eastcoastlinework
+Amazon Amplify static site
