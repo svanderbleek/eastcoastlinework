@@ -15,7 +15,24 @@
       img {
         width: 100%;
       }
+      #map {
+        height: 400px;
+        width: 100%;
+      }
     </style>
+    <script>
+      function initMap() {
+        const shop = { lat: 28.079811234277443, lng: -80.63970418896803 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: shop,
+        });
+        const marker = new google.maps.Marker({
+          position: shop,
+          map: map,
+        });
+      }
+    </script>
   </head>
   <body>
     <img src="https://scontent-mia3-2.cdninstagram.com/v/t51.2885-15/e35/66654250_2431808247144909_2308347816753691465_n.jpg?tp=1&_nc_ht=scontent-mia3-2.cdninstagram.com&_nc_cat=109&_nc_ohc=laJD_fNKQW8AX9MTy-G&edm=AABBvjUAAAAA&ccb=7-4&oh=943db107fc19dddc10d921b0df2f0219&oe=60A8927A&_nc_sid=83d603">
@@ -25,7 +42,9 @@
     <a href="https://www.instagram.com/vincetattoo305">Vince</a> & <a href="https://www.instagram.com/sandhundred">Sandy</a>.
     </p>
     <p>
-    Storefront coming soon to Melbourne, Florida.
+    Coming soon to 51 NW Carolina street in Melbourne Florida.
     </p>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxSvKODdYuepGCKAj05IHvaF8xO1iUrks&callback=initMap&libraries=&v=weekly" async></script>
   </body>
 </html>
